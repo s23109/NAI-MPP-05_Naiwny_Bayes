@@ -6,7 +6,7 @@ import java.util.List;
 public class Element {
 
     public String name;
-    List<String> params = new ArrayList<>();
+    public List<String> params = new ArrayList<>();
 
 
     public Element(String line) {
