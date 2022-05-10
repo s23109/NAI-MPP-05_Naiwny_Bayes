@@ -36,6 +36,16 @@ public class Main {
         System.out.println("=====================================");
 
         //==========================================================
+        //klasyfikacja , i od razu miary strzałów
+        double TP=0 , TN=0 , FP=0, FN=0;
+
+        for (Element testowy: testData) {
+
+            //TODO: wylicz dla prawdy i fałszu
+            //porównaj i sprawdź czy poprawnie
+
+
+        }
 
 
 
