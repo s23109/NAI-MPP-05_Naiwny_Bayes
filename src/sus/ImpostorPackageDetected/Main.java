@@ -54,9 +54,19 @@ public class Main {
 
         }
 
+        System.out.println("Poszczególne warianty wartości danych z ich ilością:");
 
+        for (int i = 0; i < mozliweStany.size(); i++) {
+            System.out.print(i+1 + " | ");
+            for (Map.Entry<String, Integer> entry : mozliweStany.get(i).entrySet()) {
+                System.out.print(entry.getKey() + ":" + entry.getValue() + " ");
+            }
+            System.out.println();
 
+        }
 
+        System.out.println("=====================================");
+        //==========================================================
 
     }
 }
