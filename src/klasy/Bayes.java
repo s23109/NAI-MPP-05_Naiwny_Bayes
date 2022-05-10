@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class Bayes {
     List<Map<String,Integer>> mozliweStany = new ArrayList<>();
-
+    double elementAmount;
     public Bayes( List<Element> treningData) {
 
         for (int i = 0; i < treningData.get(0).params.size(); i++) {
@@ -26,7 +26,7 @@ public class Bayes {
             }
         }
 
-
+        elementAmount = treningData.size();
     }
 
     public void wypiszWagi(){
@@ -35,7 +35,7 @@ public class Bayes {
         for (int i = 0; i < mozliweStany.size(); i++) {
             System.out.print(i+1 + " | ");
             for (Map.Entry<String, Integer> entry : mozliweStany.get(i).entrySet()) {
-                System.out.print(entry.getKey() + ":" + entry.getValue() + "(" + String.valueOf((double) (entry.getValue() * 100) /mozliweStany.size()).substring(0,5) + "%) / ");
+                System.out.print(entry.getKey() + ":" + entry.getValue() + "(" +String.valueOf(entry.getValue()*100/elementAmount).substring(0,5) +"%) / ");
             }
             System.out.println();
 

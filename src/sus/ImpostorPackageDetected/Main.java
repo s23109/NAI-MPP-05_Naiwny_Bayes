@@ -31,7 +31,6 @@ public class Main {
         //szerokość słowa + ile jest różnych kombinacji typu słowa
 
         Bayes bayes = new Bayes(treningData);
-
         bayes.wypiszWagi();
 
         System.out.println("=====================================");
