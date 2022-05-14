@@ -42,7 +42,7 @@ public class Bayes {
         }
     }
 
-    public boolean wyznaczCzyTrujacy(){
+    public boolean wyznaczCzyTrujacy(Element element){
         //TODO : wyznacz to
         return false;
     }

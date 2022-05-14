@@ -3,6 +3,7 @@ package sus.ImpostorPackageDetected;
 import klasy.Bayes;
 import klasy.Element;
 import klasy.FileOperations;
+import klasy.Klasyfikacja;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -37,12 +38,38 @@ public class Main {
 
         //==========================================================
         //klasyfikacja , i od razu miary strzałów
-        double TP=0 , TN=0 , FP=0, FN=0;
+        Klasyfikacja klasyfikacja = new Klasyfikacja();
 
         for (Element testowy: testData) {
 
             //TODO: wylicz dla prawdy i fałszu
-            //porównaj i sprawdź czy poprawnie
+
+            if (!bayes.wyznaczCzyTrujacy(testowy)){
+                //obstawia że jadalny
+
+                if (testowy.name.equals("e")){
+                    //zgadł
+                    klasyfikacja.TP+=1;
+                }
+                else{
+                    //obstawia że jadalny, a jest trujący
+                    klasyfikacja.FP+=1;
+                }
+
+            }
+            else {
+                // trujący
+                if (testowy.name.equals("p")){
+                    //zgadł
+                    klasyfikacja.TN+=1;
+                }
+                else{
+                    //obstawia że trujący, a jest jadalny
+                    klasyfikacja.FN+=1;
+                }
+
+            }
+
 
 
         }
