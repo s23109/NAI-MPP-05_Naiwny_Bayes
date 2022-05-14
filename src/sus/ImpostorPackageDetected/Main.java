@@ -5,10 +5,7 @@ import klasy.Element;
 import klasy.FileOperations;
 import klasy.Klasyfikacja;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class Main {
 
@@ -58,7 +55,7 @@ public class Main {
 
             }
             else {
-                // trujący
+                // obstawia że trujący
                 if (testowy.name.equals("p")){
                     //zgadł
                     klasyfikacja.TN+=1;
@@ -74,7 +71,7 @@ public class Main {
 
         }
 
-
+        klasyfikacja.PrintKlasyfikacja();
 
 
     }
