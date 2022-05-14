@@ -41,7 +41,7 @@ public class Main {
 
         for (Element testowy: testData) {
 
-            //TODO: wylicz dla prawdy i fałszu
+
 
             if (!bayes.wyznaczCzyTrujacy(testowy)){
                 //obstawia że jadalny
