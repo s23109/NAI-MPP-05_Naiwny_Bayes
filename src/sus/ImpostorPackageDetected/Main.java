@@ -30,6 +30,8 @@ public class Main {
 
         Bayes bayes = new Bayes(treningData);
         bayes.wypiszWagi();
+        System.out.println("=====================================");
+        bayes.wypiszWagiTrujacych();
 
         System.out.println("=====================================");
 
